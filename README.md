@@ -17,4 +17,4 @@ Tecnologías Utilizadas
 🏥 Actualización de información de una cita médica existente.<br>
 ❌ Eliminación de una cita médica por su ID.<br>
  ---
-
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/doctor.gif"/>
