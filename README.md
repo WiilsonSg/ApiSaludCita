@@ -1,4 +1,4 @@
-<p aling="center">REST API para Gestión de Citas 🩺</p>
+# REST API para Gestión de Citas 🩺
 
 *ApiSalud agendamiento de citas<br>*
 ### Este proyecto REST API que permite getionar citas médicas con deferentes especialidades, almacena la información de pacientes, doctores y citas agendadas.
@@ -12,9 +12,11 @@
  ---
  Características
  ---
-👨‍⚕ Creación de citas médicas con información de pacientes y doctores.<br>
+🚶 Creación de pacientes y doctores<br>
+👨‍⚕ Creación de citas médicas con información de pacientes, doctores y especialidades.<br>
 🤕 Obtención de todas las citas médicas registradas.<br>
-😷 Obtención de una cita médica específica por su ID.<br>
+😷 Obtención de una cita médica específica por su Id.<br>
+👾 Actualización de información personal de pacientes y doctores<br>
 🏥 Actualización de información de una cita médica existente.<br>
 ❌ Eliminación de una cita médica por su ID.<br>
  ---
