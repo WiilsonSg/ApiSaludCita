@@ -62,3 +62,9 @@ Ejecuta GET/POST/PUT/DELET en
   
 Capturas
 ---
+Pacientes
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/paciente.gif"/> 
+Doctores
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/doctor.gif">
+Citas
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/cita.gif">
