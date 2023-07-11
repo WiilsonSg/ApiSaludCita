@@ -53,15 +53,25 @@ npm install
 ---
 Endpoints 
 ---
-Puedes ejecutarlos en postman
+Puedes ejecutarlos en [postman](https://www.postman.com/)
 
-Ejecuta GET/POST/PUT/DELET en
+Ejecuta GET/POST/PUT/DELET
+
+Ejemplo http://127.0.0.1:3000/paciente/12345
+
+```
 * http://127.0.0.1:3000/paciente
+```
+```
 * http://127.0.0.1:3000/doctor
+```
+```
 * http://127.0.0.1:3000/cita
+```
   
 Capturas
 ---
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontGet.gif"/>
 Pacientes
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/paciente.gif"/> 
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontpostp.gif">
@@ -70,5 +80,8 @@ Doctores
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontcreard.gif">
 Citas
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/cita.gif">
+
+Curso: BACK END INTERMEDIO ATENEA - Universidad Distrital - Todos a la U
+
 
 
