@@ -26,7 +26,7 @@ app.use('/doctor', doctorRouter);
 app.use('/cita', citaRouter);
 
 
-//Conexión a bade de datos.
+//Conexión a base de datos.
 db.connect((err) => {
   if (err) {
     console.log('Database connection error');
