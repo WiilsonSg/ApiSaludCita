@@ -21,7 +21,7 @@ Paquetes
 * 😷 Obten una cita médica específica por su Id.
 * 👾 Actualización de información personal de pacientes y doctores.
 * 🏥 Actualización de información de una cita médica existente.
-* ❌ Eliminar una paciente, doctor o cita médica por su Id.
+* ❌ Eliminar un paciente, doctor o cita médica por su Id.
 ---
 Instalacón y Configuración de ApiSalud 💻
 ---
