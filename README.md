@@ -15,7 +15,7 @@ Paquetes
  ---
  Características
  ---
-* 🚶 Crea pacientes y doctores
+* 🚶 Crea pacientes y doctores.
 * 👨‍⚕ Crea citas médicas con información de pacientes, doctores y especialidades.
 * 🤕 Obten todas las citas médicas registradas.
 * 😷 Obten una cita médica específica por su Id.
@@ -34,14 +34,14 @@ Puedes clonar el reposotorio seguiendo estos pasos:
 https://github.com/WiilsonSg/ApiSaludCita.git
 ```
 
-4. Instala los paquetes requeridos para que funcione el repo
+4. Instala los paquetes requeridos para que funcione el repo:
 ```
 npm install 
 ```
-5. Crea la base de datos en MySQL
+5. Crea la base de datos en MySQL:
 - [DB] (https://github.com/WiilsonSg/ApiSaludCita/blob/main/scrip.sql)
   
-6. Configura el archivo .env con tus datos
+6. Configura el archivo .env con tus datos:
 - PORT=3000
 - DB_HOST=127.0.0.1
 - DB_USER=root
@@ -64,7 +64,11 @@ Capturas
 ---
 Pacientes
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/paciente.gif"/> 
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontpostp.gif">
 Doctores
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/doctor.gif">
+<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontcreard.gif">
 Citas
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/cita.gif">
+
+
