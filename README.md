@@ -23,7 +23,7 @@ Paquetes
 * 🏥 Actualización de información de una cita médica existente.
 * ❌ Eliminar un paciente, doctor o cita médica por su Id.
 ---
-Instalacón y Configuración de ApiSalud 💻
+Instalación y Configuración de ApiSalud 💻
 ---
 Puedes clonar el reposotorio seguiendo estos pasos:
 
