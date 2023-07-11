@@ -73,7 +73,7 @@ export const findOne = (Id_Doctor: number, callback: Function) => {
 
 //Actualizar datos de un doctor
 export const update = (doctor: Doctor, callback: Function) => {
-  const queryString = 'UPDATE doctor SET id_doctor =?, nombre=?, apellido=?, especialidad_id= ?, consultorio=?, correo=?, WHERE id_doctor=?;';
+  const queryString = 'UPDATE doctor SET id_doctor =?, nombre=?, apellido=?, especialidad_id= ?, consultorio=?, correo=? WHERE id_doctor=?;';
   db.query(
     queryString,
     [
