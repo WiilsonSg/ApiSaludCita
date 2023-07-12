@@ -57,17 +57,19 @@ Puedes ejecutarlos en [postman](https://www.postman.com/)
 
 Ejecuta GET/POST/PUT/DELET
 
-Ejemplo http://127.0.0.1:3000/paciente/12345
 
 ```
-* http://127.0.0.1:3000/paciente
+http://127.0.0.1:3000/paciente
 ```
+enlista los pacientes registrados [img]() puedes agregar el id para ver solo la informacion de un paciente [img]()
 ```
-* http://127.0.0.1:3000/doctor
+http://127.0.0.1:3000/doctor
 ```
+enlista los doctores registrados [img]() puedes agregar el id para ver solo la informacion de un doctor [img]()
 ```
-* http://127.0.0.1:3000/cita
+http://127.0.0.1:3000/cita
 ```
+enlista las citas agendadas por los pacientes mostrando la informacion  completa de la cita [img]() agrega el id del paciente [img]()
   
 Capturas
 ---
