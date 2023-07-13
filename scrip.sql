@@ -1,3 +1,4 @@
+CREATE DATABASE apisalud
 -- Tabla de especialidades
 CREATE TABLE especialidad (
     id_especialidad INT auto_increment PRIMARY KEY,
