@@ -83,7 +83,17 @@ Doctores
 Citas
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/cita.gif">
 
+---
+GRUPO
+---
+Wilson Serrato Garzón 
+[Natalia Mayiorqion] (https://github.com/nmayorquin) 
+[Camilo Soto] (https://github.com/Cks726)
+
 Curso: BACK END INTERMEDIO ATENEA - Universidad Distrital - Todos a la U
+
+
+
 
 
 
