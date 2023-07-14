@@ -39,7 +39,7 @@ https://github.com/WiilsonSg/ApiSaludCita.git
 npm install 
 ```
 5. Crea la base de datos en MySQL:
-- [DB] (https://github.com/WiilsonSg/ApiSaludCita/blob/main/scrip.sql)
+- [DB](https://github.com/WiilsonSg/ApiSaludCita/blob/main/scrip.sql)
   
 6. Configura el archivo .env con tus datos:
 - PORT=3000
@@ -87,8 +87,8 @@ Citas
 GRUPO
 ---
 Wilson Serrato Garzón 
-[Natalia Mayiorqion] (https://github.com/nmayorquin) 
-[Camilo Soto] (https://github.com/Cks726)
+[Natalia Mayiorqion](https://github.com/nmayorquin) 
+[Camilo Soto](https://github.com/Cks726)
 
 Curso: BACK END INTERMEDIO ATENEA - Universidad Distrital - Todos a la U
 
