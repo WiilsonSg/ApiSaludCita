@@ -1,11 +1,16 @@
+---Crear Base de Datos
+CREATE DATABASE apisalus;
+
 -- Tabla de especialidades
 CREATE TABLE especialidad (
     id_especialidad INT auto_increment PRIMARY KEY,
     nombre VARCHAR(200)
 );
+
 --Ingresar especialidad
-INSERT INTO especialidad (id_especialidad, nombre) VALUES (?,?);
+INSERT INTO especialidad (nombre) VALUES (?);
 INSERT INTO especialidad VALUES (Medicina general);
+
 
 -- Tabla de doctores
 CREATE TABLE doctor (
@@ -30,6 +35,7 @@ CREATE TABLE paciente (
     telefono VARCHAR(30),
     PRIMARY KEY(id_paciente)
 );
+
 -- Ingresar un Paciente
 INSERT INTO pacientes VALUES (10124563964, "Wilson", "Serrato Garzón", 28, "3196832654");
 INSERT INTO paciente (id_paciente, nombre, apellido, edad, telefono) VALUES (?, ?, ?, ?, ?);
@@ -42,6 +48,7 @@ CREATE TABLE cita (
     FOREIGN KEY (paciente_id) REFERENCES pacientes (id_paciente),
     FOREIGN KEY (especialidad_id) REFERENCES especialidad (id_especialidad)
 );
+
 -- Agendar/crear cita nueva
 INSERT INTO cita(paciente_id, especialidad_id) VALUES(10124563964, 2);
 INSERT INTO cita(paciente_id, especialidad_id) VALUES(?, ?);

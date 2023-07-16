@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.remove = exports.update = exports.findOne = exports.findAll = exports.create = void 0;
 const db_1 = require("../db");
-//Crea nuevo doctor
+//Crea nuevo doctor.
 const create = (doctor, callback) => {
     const queryString = 'INSERT INTO doctor (id_doctor, nombre, apellido, especialidad_id, consultorio, correo) VALUES (?, ?, ?, ?, ?, ?)';
     db_1.db.query(queryString, [
@@ -21,7 +21,7 @@ const create = (doctor, callback) => {
     });
 };
 exports.create = create;
-//Ver todos los doctores
+//Ver todos los doctores.
 const findAll = (callback) => {
     const queryString = 'SELECT * FROM apisalud.doctor;';
     db_1.db.query(queryString, (err, result) => {
@@ -46,7 +46,7 @@ const findAll = (callback) => {
     });
 };
 exports.findAll = findAll;
-//Ver un doctor po id
+//Ver un doctor por su id.
 const findOne = (Id_Doctor, callback) => {
     const queryString = "SELECT * FROM apisalud.doctor where id_doctor=?";
     db_1.db.query(queryString, Id_Doctor, (err, result) => {
@@ -66,16 +66,17 @@ const findOne = (Id_Doctor, callback) => {
     });
 };
 exports.findOne = findOne;
-//Actualizar datos de un doctor
+//Actualizar datos de un doctor.
 const update = (doctor, callback) => {
-    const queryString = 'UPDATE doctor SET id_doctor =?, nombre=?, apellido=?, especialidad_id= ?, consultorio=? WHERE id_doctor=?;';
+    const queryString = 'UPDATE doctor SET id_doctor =?, nombre=?, apellido=?, especialidad_id= ?, consultorio=?, correo=? WHERE id_doctor=?;';
     db_1.db.query(queryString, [
         doctor.id_doctor,
         doctor.nombre,
         doctor.apellido,
         doctor.especialidad_id,
         doctor.consultorio,
-        doctor.correo
+        doctor.correo,
+        doctor.id_doctor
     ], (err, result) => {
         if (err) {
             callback(err);
@@ -85,7 +86,7 @@ const update = (doctor, callback) => {
     });
 };
 exports.update = update;
-//Eliminar a un doctor 
+//Eliminar a un doctor.
 const remove = (id_doctor, callback) => {
     const queryString = 'DELETE FROM doctor WHERE id_doctor=?;';
     db_1.db.query(queryString, [

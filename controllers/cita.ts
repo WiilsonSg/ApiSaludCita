@@ -1,6 +1,6 @@
-import { BasicCita, Cita, citaDetalles } from "../models/cita";
-import { db } from "../db"
 import { OkPacket, RowDataPacket } from "mysql2";
+import { db } from "../db";
+import { Cita, citaDetalles } from "../models/cita";
 
 //Crea una nueva cita 
 export const create = (cita: Cita, callback: Function) => {
@@ -21,7 +21,7 @@ export const create = (cita: Cita, callback: Function) => {
   );
 };
 
-//Ver todas las citas con su información
+//Obtener todas las citas con toda la información.
 export const findAll = (callback: Function) => {
   const queryString =`
     SELECT c.id_cita, e.id_especialidad, e.nombre AS nombre_especialidad, c.paciente_id,
@@ -73,7 +73,7 @@ export const findAll = (callback: Function) => {
   });
 };
 
-//Ver cita por id del paciente con su información 
+//Obtener citas con toda la información por id del paciente.
 export const findOne = (id_cita: number, callback: Function) => {
   const queryString =`
     SELECT c.id_cita, e.id_especialidad, e.nombre AS nombre_especialidad, c.paciente_id,
@@ -119,15 +119,16 @@ export const findOne = (id_cita: number, callback: Function) => {
   });
 };
 
-//Actualizar cita
+//Actualizar cita se puede cambiar por otra especialidad.
 export const update = (cita: Cita, callback: Function) => {
   const queryString = 'UPDATE cita SET  paciente_id= ?, especialidad_id= ? WHERE id_cita=?;';
   db.query(
     queryString,
     [
-      cita.id_cita,
+      
       cita.paciente_id,
       cita.especialidad_id,
+      cita.id_cita
     ],
     (err, result) => {
       if (err) { callback(err); }
@@ -138,7 +139,7 @@ export const update = (cita: Cita, callback: Function) => {
   );
 };
 
-//Eliminar cita
+//Eliminar cita. 
 export const remove = (id_cita: number, callback: Function) => {
   const queryString = 'DELETE FROM cita WHERE id_cita=?;';
   db.query(queryString,

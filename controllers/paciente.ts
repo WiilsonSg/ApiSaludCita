@@ -1,8 +1,8 @@
-import { Paciente, BasicPaciente } from "../models/paciente";
-import { db } from "../db";
 import { OkPacket, RowDataPacket } from "mysql2";
+import { db } from "../db";
+import { Paciente } from "../models/paciente";
 
-//Crea un nuevo paciente
+//Crea un nuevo paciente.
 export const create = (paciente: Paciente, callback: Function) => {
   const queryString = 'INSERT INTO paciente (id_paciente, nombre, apellido, edad, telefono) VALUES (?, ?, ?, ?, ?)';
 
@@ -23,7 +23,7 @@ export const create = (paciente: Paciente, callback: Function) => {
   );
 };
 
-//Ver todos los pacientes
+//Ver todos los pacientes.
 export const findAll = (callback: Function) => {
   const queryString = 'SELECT * FROM apisalud.paciente;';
 
@@ -50,7 +50,7 @@ export const findAll = (callback: Function) => {
   });
 };
 
-//Ver paciente por id
+//Ver paciente por id.
 export const findOne = (id_paciente: number, callback: Function) => {
   const queryString = "SELECT * FROM apisalud.paciente WHERE id_paciente=?";
 
@@ -69,7 +69,7 @@ export const findOne = (id_paciente: number, callback: Function) => {
   });
 };
 
-//Actualiza datos del paciente
+//Actualiza datos del paciente.
 export const update = (paciente: Paciente, callback: Function) => {
   const queryString = 'UPDATE paciente SET id_paciente =?, nombre =?, apellido =?, edad =?, telefono =? WHERE id_paciente=?;';
   db.query(
@@ -91,23 +91,7 @@ export const update = (paciente: Paciente, callback: Function) => {
   );
 };
 
-/*
-export const update = (paciente: Paciente, callback: Function) => {
-  const queryString = 'UPDATE paciente SET id_paciente =?, nombre =?, apellido =?, edad =?, telefono =? WHERE id_paciente=?;';
-  const values = [paciente.id_paciente, paciente.nombre, paciente.apellido, paciente.edad, paciente.telefono, paciente.id_paciente];
-
-  db.query(queryString, values, (err, result) => {
-    if (err) {
-      callback(err);
-      return;
-    }
-    const numUpdate = (<OkPacket>result).affectedRows;
-    callback(null, numUpdate);
-  });
-};
-*/
-
-//Elimana un paciente 
+//Elimana un paciente.
 export const remove = (id_paciente: number, callback: Function) => {
   const queryString = 'DELETE FROM paciente WHERE id_paciente=?;';
   db.query(queryString, [id_paciente], (err, resul) => {

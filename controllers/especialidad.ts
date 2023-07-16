@@ -1,8 +1,8 @@
-import { BasicEspecialidades, Especialidad } from "../models/especialidad";
-import { db } from "../db";
 import { OkPacket, RowDataPacket } from "mysql2";
+import { db } from "../db";
+import { BasicEspecialidades, Especialidad } from "../models/especialidad";
 
-//Crea una nueva especialidad 
+//Crea una nueva especialidad.
 export const create = (especialidad: Especialidad, callback: Function) => {
   const queryString = 'INSERT INTO especialidad (id_especialidad, nombre) VALUES (?,?)';
   db.query(queryString,
@@ -18,7 +18,7 @@ export const create = (especialidad: Especialidad, callback: Function) => {
   )
 }
 
-//Ver todas la especialidades registradas 
+//Ver todas la especialidades registradas. 
 export const findAll = (callback: Function) => {
   const queryString = 'SELECT * FROM apisalud.especialidad;';
 
@@ -42,7 +42,7 @@ export const findAll = (callback: Function) => {
   });
 };
 
-//Elimina una especialidad
+//Elimina una especialidad.
 export const remove = (id_especialidad: number, callback: Function) => {
   const queryString = 'DELETE FROM especialidad WHERE id_especialidad=?;';
   db.query(queryString, [id_especialidad], (err, resul) => {

@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express';
 import * as especialidadModel from '../controllers/especialidad';
-import { Especialidad, BasicEspecialidades } from '../models/especialidad';
+import { Especialidad } from '../models/especialidad';
 
 const especialidadRouter = express.Router();
 
-//Crea una especialidad nueva
+//Crea una especialidad nueva.
 especialidadRouter.post('/', async (req: Request, res: Response) => {
     const newEspecialidad: Especialidad = req.body;
     especialidadModel.create(newEspecialidad, (err: Error) => {
@@ -15,7 +15,7 @@ especialidadRouter.post('/', async (req: Request, res: Response) => {
     });
 });
 
-//Ver todas las especialidades
+//Ver todas las especialidades.
 especialidadRouter.get('/', async (req: Request, res: Response) =>
     especialidadModel.findAll((err: Error, especialidad: Especialidad[]) => {
         if (err) {
@@ -24,7 +24,7 @@ especialidadRouter.get('/', async (req: Request, res: Response) =>
         res.status(200).json({ 'Datos de la especilidad': especialidad });
     }));
 
-//Elimina una especialidad por id
+//Elimina una especialidad por id.
 especialidadRouter.delete('/:id', async (req: Request, res: Response) => {
     const id_paciente: number = parseInt(req.params.id);
     especialidadModel.remove(id_paciente, (err: Error, numDelete: number) => {

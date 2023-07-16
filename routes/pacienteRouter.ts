@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express';
 import * as pacienteModel from '../controllers/paciente';
-import { Paciente, BasicPaciente } from '../models/paciente';
+import { Paciente } from '../models/paciente';
 
 const pacienteRouter = express.Router();
 
-//Crea un nuevo paciente
+//Crea un nuevo paciente.
 pacienteRouter.post('/', async (req: Request, res: Response) => {
     const newPaciente: Paciente = req.body;
     pacienteModel.create(newPaciente, (err: Error) => {
@@ -15,27 +15,30 @@ pacienteRouter.post('/', async (req: Request, res: Response) => {
     });
 });
 
-//Ver todos los pacientes de la BD
+//Ver todos los pacientes de la BD.
 pacienteRouter.get('/', async (req: Request, res: Response) =>
     pacienteModel.findAll((err: Error, paciente: Paciente[]) => {
         if (err) {
-            return res.status(500).json({ 'error Message': err.message });
+            return res.status(500).json({ 'Error': err.message });
         }
         res.status(200).json({ 'Datos de los pacientes': paciente });
     }));
 
-//Ver paciente por id
+//Ver paciente por id.
 pacienteRouter.get('/:id', async (req: Request, res: Response) => {
     const Id_Paciente = Number(req.params.id);
+    if(isNaN(Id_Paciente)){
+        return res.status(400).json({"message":"Numero del id invalido"})
+    }
     pacienteModel.findOne(Id_Paciente, (err: Error, paciente: Paciente) => {
         if (err) {
-            return res.status(500).json({ 'message': err.message });
+            return res.status(500).json({ 'Error': err.message });
         }
         res.status(200).json({ 'Datos del paciente': paciente });
     });
 });
 
-//Actualiza el paciente por id
+//Actualiza el paciente por id.
 pacienteRouter.put('/:id', async (req: Request, res: Response) => {
     const paciente: Paciente = req.body;
     pacienteModel.update(paciente, (err: Error, numUpdate: number) => {
@@ -46,7 +49,7 @@ pacienteRouter.put('/:id', async (req: Request, res: Response) => {
     });
 });
 
-//Elimina el paciente por id
+//Elimina el paciente por id.
 pacienteRouter.delete('/:id', async (req: Request, res: Response) => {
     const id_paciente: number = parseInt(req.params.id);
     pacienteModel.remove(id_paciente, (err: Error, numDelete: number) => {

@@ -40,51 +40,54 @@ const express_1 = __importDefault(require("express"));
 const doctorModel = __importStar(require("../controllers/doctor"));
 const doctorRouter = express_1.default.Router();
 exports.doctorRouter = doctorRouter;
-//Crea un nuevo doctor
+//Crea un nuevo doctor.
 doctorRouter.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const newDoctor = req.body;
     doctorModel.create(newDoctor, (err) => {
         if (err) {
-            return res.status(400).json({ 'message': err.message });
+            return res.status(500).json({ 'Error al crear': err.message });
         }
-        res.status(200).json(newDoctor);
+        res.status(200).json({ "registro exitoso": newDoctor });
     });
 }));
-//Ver todos los dostores
+//Ver todos los dostores.
 doctorRouter.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     return doctorModel.findAll((err, doctor) => {
         if (err) {
-            return res.status(400).json({ 'error Message': err.message });
+            return res.status(500).json({ 'Error ': err.message });
         }
         res.status(200).json({ 'Doctores registrados': doctor });
     });
 }));
-//Ver doctor por id
+//Ver doctor por id.
 doctorRouter.get('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id_doctor = Number(req.params.id);
+    if (isNaN(id_doctor)) {
+        return res.status(400).json({ "message": "Numero del id invalido" });
+    }
     doctorModel.findOne(id_doctor, (err, doctor) => {
         if (err) {
-            return res.status(500).json({ 'message': err.message });
+            return res.status(500).json({ 'Error': err.message });
         }
         res.status(200).json({ 'Datos del doctor': doctor });
     });
 }));
-//Acualizar doctor por id
+//Acualizar doctor por id.
 doctorRouter.put('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const doctor = req.body;
     doctorModel.update(doctor, (err, numUpdate) => {
         if (err) {
-            return res.status(500).json({ 'message': err.message });
+            return res.status(500).json({ 'No se puede actualizar': err.message });
         }
         res.status(200).json({ 'Datos actualizados': numUpdate });
     });
 }));
-//Eliminar docotor por id
+//Eliminar docotor por id.
 doctorRouter.delete('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id_doctor = parseInt(req.params.id);
     doctorModel.remove(id_doctor, (err, numDelete) => {
         if (err) {
-            return res.status(500).json({ 'message': err.message });
+            return res.status(500).json({ 'Error al eliminar': err.message });
         }
         res.status(200).json({ 'Doctor eliminado corectamente': numDelete });
     });

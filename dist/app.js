@@ -26,29 +26,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const bodyParser = __importStar(require("body-parser"));
 const dotenv = __importStar(require("dotenv"));
 const express_1 = __importDefault(require("express"));
-const bodyParser = __importStar(require("body-parser"));
-const pacienteRouter_1 = require("./routes/pacienteRouter");
-const especialidadRouter_1 = require("./routes/especialidadRouter");
-const doctorRouter_1 = require("./routes/doctorRouter");
-const citaRouter_1 = require("./routes/citaRouter");
 const db_1 = require("./db");
+const citaRouter_1 = require("./routes/citaRouter");
+const doctorRouter_1 = require("./routes/doctorRouter");
+const especialidadRouter_1 = require("./routes/especialidadRouter");
+const pacienteRouter_1 = require("./routes/pacienteRouter");
 const app = (0, express_1.default)();
 dotenv.config();
 app.use(bodyParser.json());
-// Agrega middleware para permitir CORS
+// AConexión con el FrontEnd en Angular
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200'); //URL de Angular
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
 });
+// Endpoints
 app.use('/paciente', pacienteRouter_1.pacienteRouter);
 app.use('/especialidad', especialidadRouter_1.especialidadRouter);
 app.use('/doctor', doctorRouter_1.doctorRouter);
 app.use('/cita', citaRouter_1.citaRouter);
-//Conexión a bade de datos.
+//Conexión a la Bade de Datos.
 db_1.db.connect((err) => {
     if (err) {
         console.log('Database connection error');

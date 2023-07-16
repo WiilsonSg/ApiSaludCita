@@ -17,7 +17,7 @@ const create = (cita, callback) => {
     });
 };
 exports.create = create;
-//Ver todas las citas con su información
+//Obtener todas las citas con toda la información.
 const findAll = (callback) => {
     const queryString = `
     SELECT c.id_cita, e.id_especialidad, e.nombre AS nombre_especialidad, c.paciente_id,
@@ -63,7 +63,7 @@ const findAll = (callback) => {
     });
 };
 exports.findAll = findAll;
-//Ver cita por id del paciente con su información 
+//Obtener citas con toda la información por id del paciente.
 const findOne = (id_cita, callback) => {
     const queryString = `
     SELECT c.id_cita, e.id_especialidad, e.nombre AS nombre_especialidad, c.paciente_id,
@@ -105,13 +105,13 @@ const findOne = (id_cita, callback) => {
     });
 };
 exports.findOne = findOne;
-//Actualizar cita
+//Actualizar cita se puede cambiar por otra especialidad.
 const update = (cita, callback) => {
     const queryString = 'UPDATE cita SET  paciente_id= ?, especialidad_id= ? WHERE id_cita=?;';
     db_1.db.query(queryString, [
-        cita.id_cita,
         cita.paciente_id,
         cita.especialidad_id,
+        cita.id_cita
     ], (err, result) => {
         if (err) {
             callback(err);
@@ -121,7 +121,7 @@ const update = (cita, callback) => {
     });
 };
 exports.update = update;
-//Eliminar cita
+//Eliminar cita. 
 const remove = (id_cita, callback) => {
     const queryString = 'DELETE FROM cita WHERE id_cita=?;';
     db_1.db.query(queryString, [

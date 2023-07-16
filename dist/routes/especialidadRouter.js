@@ -40,7 +40,7 @@ const express_1 = __importDefault(require("express"));
 const especialidadModel = __importStar(require("../controllers/especialidad"));
 const especialidadRouter = express_1.default.Router();
 exports.especialidadRouter = especialidadRouter;
-//Crea una especialidad nueva
+//Crea una especialidad nueva.
 especialidadRouter.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const newEspecialidad = req.body;
     especialidadModel.create(newEspecialidad, (err) => {
@@ -50,7 +50,7 @@ especialidadRouter.post('/', (req, res) => __awaiter(void 0, void 0, void 0, fun
         res.status(200).json(newEspecialidad);
     });
 }));
-//Ver todas las especialidades
+//Ver todas las especialidades.
 especialidadRouter.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     return especialidadModel.findAll((err, especialidad) => {
         if (err) {
@@ -59,7 +59,7 @@ especialidadRouter.get('/', (req, res) => __awaiter(void 0, void 0, void 0, func
         res.status(200).json({ 'Datos de la especilidad': especialidad });
     });
 }));
-//Elimina una especialidad por id
+//Elimina una especialidad por id.
 especialidadRouter.delete('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id_paciente = parseInt(req.params.id);
     especialidadModel.remove(id_paciente, (err, numDelete) => {

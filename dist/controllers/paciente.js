@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.remove = exports.update = exports.findOne = exports.findAll = exports.create = void 0;
 const db_1 = require("../db");
-//Crea un nuevo paciente
+//Crea un nuevo paciente.
 const create = (paciente, callback) => {
     const queryString = 'INSERT INTO paciente (id_paciente, nombre, apellido, edad, telefono) VALUES (?, ?, ?, ?, ?)';
     db_1.db.query(queryString, [
@@ -20,7 +20,7 @@ const create = (paciente, callback) => {
     });
 };
 exports.create = create;
-//Ver todos los pacientes
+//Ver todos los pacientes.
 const findAll = (callback) => {
     const queryString = 'SELECT * FROM apisalud.paciente;';
     db_1.db.query(queryString, (err, result) => {
@@ -44,7 +44,7 @@ const findAll = (callback) => {
     });
 };
 exports.findAll = findAll;
-//Ver paciente por id
+//Ver paciente por id.
 const findOne = (id_paciente, callback) => {
     const queryString = "SELECT * FROM apisalud.paciente WHERE id_paciente=?";
     db_1.db.query(queryString, id_paciente, (err, result) => {
@@ -63,7 +63,7 @@ const findOne = (id_paciente, callback) => {
     });
 };
 exports.findOne = findOne;
-//Actualiza datos del paciente
+//Actualiza datos del paciente.
 const update = (paciente, callback) => {
     const queryString = 'UPDATE paciente SET id_paciente =?, nombre =?, apellido =?, edad =?, telefono =? WHERE id_paciente=?;';
     db_1.db.query(queryString, [
@@ -82,22 +82,7 @@ const update = (paciente, callback) => {
     });
 };
 exports.update = update;
-/*
-export const update = (paciente: Paciente, callback: Function) => {
-  const queryString = 'UPDATE paciente SET id_paciente =?, nombre =?, apellido =?, edad =?, telefono =? WHERE id_paciente=?;';
-  const values = [paciente.id_paciente, paciente.nombre, paciente.apellido, paciente.edad, paciente.telefono, paciente.id_paciente];
-
-  db.query(queryString, values, (err, result) => {
-    if (err) {
-      callback(err);
-      return;
-    }
-    const numUpdate = (<OkPacket>result).affectedRows;
-    callback(null, numUpdate);
-  });
-};
-*/
-//Elimana un paciente 
+//Elimana un paciente.
 const remove = (id_paciente, callback) => {
     const queryString = 'DELETE FROM paciente WHERE id_paciente=?;';
     db_1.db.query(queryString, [id_paciente], (err, resul) => {
