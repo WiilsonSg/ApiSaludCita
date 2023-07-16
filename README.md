@@ -68,7 +68,7 @@ Puedes ejecutarlos en [postman](https://www.postman.com/)
 
 Ejecuta GET/POST/PUT/DELETE
 
-GET
+🟢GET
 ```
 http://127.0.0.1:3000/paciente/
 ```
@@ -82,7 +82,7 @@ http://127.0.0.1:3000/cita
 ```
 enlista las citas agendadas por los pacientes mostrando la informacion  completa de la cita [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/citaAll.png) agrega el id del paciente [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/citaOne.png)
 
-POST
+🟡POST
 
 [Pacientes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/crearPaciente.gif)
 ```
@@ -116,7 +116,7 @@ http://127.0.0.1:3000/cita
 }
 ```
 
-PUT
+🔵PUT
 
 [Pacientes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/updatePaciente.gif)
 ```
@@ -150,7 +150,7 @@ http://127.0.0.1:3000/cita/
     "id_cita":
 }
 ```
-DELETE
+🔴DELETE
 
 [Pacientes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/deletePaciente.gif)
 ```
@@ -179,7 +179,7 @@ Citas
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/cita.gif">
 
 ---
-GRUPO
+GRUPO 
 ---
 * Wilson Serrato Garzón 
 
