@@ -1,5 +1,5 @@
 ---Crear Base de Datos
-CREATE DATABASE apisalus;
+CREATE DATABASE apisalud
 
 -- Tabla de especialidades
 CREATE TABLE especialidad (
