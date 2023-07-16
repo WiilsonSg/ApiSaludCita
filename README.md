@@ -18,7 +18,7 @@ Paquetes
 
 Front End
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" width="100" height="100">&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" width="80" height="80">&nbsp;
 
 frontEnd [apisalud]()
 
