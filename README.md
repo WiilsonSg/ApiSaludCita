@@ -2,16 +2,27 @@
 
 *ApiSalud agendamiento de citas<br>*
 _Este proyecto REST API permite getionar citas médicas con diferentes especialidades, almacena la información de pacientes, doctores y citas agendadas.
-# Tecnologías Utilizadas
+# Tecnologías Utilizadas 
 
-<img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" width="100" height="100"/>&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg" width="100" height="100">&nbsp;
-<img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" width="70" height="70">&nbsp;
+Back End
+
+<img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" width="120" height="120"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg" width="120" height="120">&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" width="80" height="80">&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" width="100" height="100">&nbsp;
+
 
 Paquetes
 - nodemon
 - dotenv
+
+Front End
+
+<img src="https://github.com/devicons/devicon/blob/master/icons/angularjs/angularjs-original.svg" width="100" height="100">&nbsp;
+
+frontEnd [apisalud]()
+
+
  ---
  Características
  ---
@@ -57,19 +68,19 @@ Puedes ejecutarlos en [postman](https://www.postman.com/)
 
 Ejecuta GET/POST/PUT/DELET
 
-
+GET
 ```
-http://127.0.0.1:3000/paciente
+http://127.0.0.1:3000/paciente/
 ```
-enlista los pacientes registrados [img]() puedes agregar el id para ver solo la informacion de un paciente [img]()
+enlista los pacientes registrados [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/pacienteAll.png) puedes agregar el id para ver solo la informacion de un paciente [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/pacienteOne.png)
 ```
 http://127.0.0.1:3000/doctor
 ```
-enlista los doctores registrados [img]() puedes agregar el id para ver solo la informacion de un doctor [img]()
+enlista los doctores registrados [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/doctorAll.png) puedes agregar el id para ver solo la informacion de un doctor [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/doctorOne.png)
 ```
 http://127.0.0.1:3000/cita
 ```
-enlista las citas agendadas por los pacientes mostrando la informacion  completa de la cita [img]() agrega el id del paciente [img]()
+enlista las citas agendadas por los pacientes mostrando la informacion  completa de la cita [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/citaAll.png) agrega el id del paciente [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/citaOne.png)
   
 Capturas
 ---
