@@ -66,7 +66,7 @@ Endpoints
 ---
 Puedes ejecutarlos en [postman](https://www.postman.com/)
 
-Ejecuta GET/POST/PUT/DELET
+Ejecuta GET/POST/PUT/DELETE
 
 GET
 ```
@@ -81,15 +81,99 @@ enlista los doctores registrados [img](https://github.com/WiilsonSg/ApiSaludCita
 http://127.0.0.1:3000/cita
 ```
 enlista las citas agendadas por los pacientes mostrando la informacion  completa de la cita [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/citaAll.png) agrega el id del paciente [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/citaOne.png)
-  
+
+POST
+
+[Pacientes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/crearPaciente.gif)
+```
+http://127.0.0.1:3000/paciente
+{
+    "id_paciente": ,
+    "nombre": "",
+    "apellido": "",
+    "edad": ,
+    "telefono": ""
+}
+```
+[Docotes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/crearDoctor.gif)
+```
+http://127.0.0.1:3000/doctor
+{
+    "id_doctor": ,
+    "nombre": "",
+    "apellido": "",
+    "especialidad_id": ,
+    "consultorio": "",
+    "correo": ""
+}
+```
+[Citas](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/crearCita.gif)
+```
+http://127.0.0.1:3000/cita
+{
+    "paciente_id": ,
+    "especialidad_id": ,
+}
+```
+
+PUT
+
+[Pacientes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/updatePaciente.gif)
+```
+http://127.0.0.1:3000/paciente/id_paciente
+{
+    "id_paciente": ,
+    "nombre": "",
+    "apellido": "",
+    "edad": ,
+    "telefono": ""
+}
+```
+[Docotes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/updateDoctor.gif)
+```
+http://127.0.0.1:3000/doctor/id_doctor
+{
+    "id_doctor": ,
+    "nombre": "",
+    "apellido": "",
+    "especialidad_id": ,
+    "consultorio": "",
+    "correo": ""
+}
+```
+[Citas](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/updateCita.gif)
+```
+http://127.0.0.1:3000/cita/
+{
+    "paciente_id": ,
+    "especialidad_id": ,
+    "id_cita":
+}
+```
+DELETE
+
+[Pacientes](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/deletePaciente.gif)
+```
+http://127.0.0.1:3000/paciente/id
+```
+[Doctores](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/deleteDoctor.gif)
+```
+http://127.0.0.1:3000/doctor/id
+```
+[Citas](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/deleteCita.gif)
+```
+http://127.0.0.1:3000/cita/id
+{
+    "id_cita":
+}
+```
+
 Capturas
 ---
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontGet.gif"/>
 Pacientes
-<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/paciente.gif"/> 
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontpostp.gif">
 Doctores
-<img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/doctor.gif">
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/frontcreard.gif">
 Citas
 <img src="https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/cita.gif">
