@@ -70,7 +70,7 @@ Ejecuta GET/POST/PUT/DELETE
 
 🟢GET
 ```
-http://127.0.0.1:3000/paciente/
+http://127.0.0.1:3000/paciente
 ```
 enlista los pacientes registrados [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/pacienteAll.png) puedes agregar el id para ver solo la informacion de un paciente [img](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/img/pacienteOne.png)
 ```
@@ -143,7 +143,7 @@ http://127.0.0.1:3000/doctor/id_doctor
 ```
 [Citas](https://github.com/WiilsonSg/ApiSaludCita/blob/main/imgGif/gif/updateCita.gif)
 ```
-http://127.0.0.1:3000/cita/
+http://127.0.0.1:3000/cita
 {
     "paciente_id": ,
     "especialidad_id": ,
@@ -183,7 +183,7 @@ GRUPO
 ---
 * Wilson Serrato Garzón 
 
-* [Natalia Mayiorqion](https://github.com/nmayorquin) 
+* [Natalia Mayorquin Duran](https://github.com/nmayorquin) 
 
 * [Camilo Soto](https://github.com/Cks726)
 
